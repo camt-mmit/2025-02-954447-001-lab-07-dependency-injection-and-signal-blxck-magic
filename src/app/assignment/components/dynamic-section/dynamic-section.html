@@ -1,0 +1,57 @@
+<h3>Dynamic Section</h3>
+
+<div class="add-section-button">
+  <button type="button" (click)="addSection()">
+    <span class="material-symbols-outlined"> Add </span>
+    Section
+  </button>
+</div>
+
+<hr />
+
+<div class="content">
+  @for (section of sections; track section; let i = $index) {
+    <div class="content-section-head">
+      <div class="content-add-inp">
+        <button type="button" (click)="add(i)">
+          <span class="material-symbols-outlined"> Add </span>
+          Input
+        </button>
+      </div>
+
+      <div>Section {{ i + 1 }}</div>
+
+      <div class="content-remove-section">
+        <button type="button" (click)="removeSection(i)" [disabled]="sections.length === 1">
+          <span class="material-symbols-outlined"> Delete </span>
+        </button>
+      </div>
+    </div>
+
+    @for (item of section.items; track item; let j = $index) {
+      <div class="content-input-container">
+        <label>
+          Number {{ j + 1 }}
+          <input
+            type="number"
+            #elem
+            [value]="item.value"
+            (input)="onChange(i, j, elem.valueAsNumber)"
+          />
+        </label>
+
+        <div class="content-remove-inp">
+          <button type="button" (click)="remove(i, j)" [disabled]="section.items.length === 1">
+            <span class="material-symbols-outlined"> Delete </span>
+          </button>
+        </div>
+      </div>
+    }
+    <div class="result">
+      <label>
+        Result
+        <output>{{ getResult(i) }}</output>
+      </label>
+    </div>
+  }
+</div>
