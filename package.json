@@ -1,13 +1,12 @@
 {
-  "name": "week-07",
+  "name": "week-07-02",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "ng lint"
+    "test": "ng test"
   },
   "prettier": {
     "printWidth": 100,
@@ -29,25 +28,16 @@
     "@angular/core": "^21.0.0",
     "@angular/forms": "^21.0.0",
     "@angular/platform-browser": "^21.0.0",
-    "@angular/platform-server": "^21.0.0",
     "@angular/router": "^21.0.0",
-    "@angular/ssr": "^21.0.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^21.0.4",
-    "@angular/cli": "^21.0.4",
+    "@angular/build": "^21.0.5",
+    "@angular/cli": "^21.0.5",
     "@angular/compiler-cli": "^21.0.0",
-    "angular-eslint": "21.1.0",
-    "@angular-eslint/builder": "21.1.0",
-    "eslint": "^9.39.1",
-    "@eslint/js": "^9.39.1",
     "jsdom": "^27.1.0",
-    "prettier": "^3.7.4",
     "typescript": "~5.9.2",
-    "typescript-eslint": "8.47.0",
-    "@types/node": "^20.17.19",
     "vitest": "^4.0.8"
   }
 }
